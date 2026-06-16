@@ -18,6 +18,8 @@ export default function QRBlock({ item }: QRBlockProps) {
         alt={`QR code: ${item.label}`}
         width={88}
         height={88}
+        loading="lazy"
+        decoding="async"
         className="h-22 w-22 shrink-0 rounded-xl ring-1 ring-slate-100"
       />
       <div className="min-w-0">
