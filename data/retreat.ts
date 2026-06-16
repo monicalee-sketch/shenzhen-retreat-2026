@@ -124,7 +124,7 @@ export const retreatData: RetreatData = {
       title: "Other pre-trip reminders",
       content: [
         "Submit any dietary requirements or allergies to the organising committee ahead of time.",
-        "Confirm your flight details and airport transfer arrangements with the logistics coordinator.",
+        "Confirm your flight details with the logistics coordinator.",
         "Save the Contacts section to your phone before you fly — it works without internet once saved.",
       ],
     },
@@ -172,18 +172,12 @@ export const retreatData: RetreatData = {
       day: 1,
       date: "Tue 15 July 2026",
       label: "Arrival Day",
-      summary: "Fly in, settle into the hotel, and rest up for the days ahead.",
+      summary: "Fly in, make your own way to the hotel, and rest up for the days ahead.",
       events: [
         {
           time: "Throughout the day",
           title: "Arrivals into Shenzhen",
-          description: "Staff fly in throughout the day on direct flights to Shenzhen Bao'an Airport (SZX).",
-          tag: "travel",
-        },
-        {
-          time: "On arrival",
-          title: "Airport transfers",
-          description: "[PLACEHOLDER] Transfer details and meeting point to be confirmed by logistics.",
+          description: "Staff fly in throughout the day to Shenzhen Bao'an Airport (SZX). Make your own way to the hotel — Didi is the easiest option; copy the Chinese hotel address in the Hotel section and paste it into the app.",
           tag: "travel",
         },
         {
@@ -199,7 +193,7 @@ export const retreatData: RetreatData = {
           tag: "free",
         },
       ],
-      notes: "Note: some rooms are occupied from Night 1; the rest of the group arrives on Day 2.",
+      notes: "Everyone makes their own way from the airport — use Didi and paste the hotel's Chinese address. Some staff arrive Day 1; the rest arrive Day 2.",
     },
     {
       day: 2,
@@ -285,12 +279,6 @@ export const retreatData: RetreatData = {
           title: "Hotel check-out",
           description: "Please check out of your room by 12:00 noon.",
           tag: "highlight",
-        },
-        {
-          time: "Throughout the morning",
-          title: "Airport transfers",
-          description: "[PLACEHOLDER] Transfer details and timing to be confirmed by logistics, based on individual flight times.",
-          tag: "travel",
         },
         {
           time: "Varies",
