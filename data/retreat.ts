@@ -11,7 +11,7 @@ export const retreatData: RetreatData = {
       "Welcome to Shenzhen! This guide has everything you need for the retreat — itinerary, hotel info, getting around, and who to call if you need help. Bookmark this page or add it to your home screen so it's always one tap away.",
     quickReminders: [
       "Check in from 3:00pm on Day 1 — Hilton Shenzhen Futian",
-      "Gala dinner is Day 2 evening — smart casual recommended",
+      "Banquet dinner is Day 2 evening — smart casual recommended",
       "Tea house activity Day 3 morning — comfortable shoes",
       "Check out by 12:00 noon on Day 4",
     ],
@@ -90,6 +90,7 @@ export const retreatData: RetreatData = {
     {
       title: "What to pack",
       content: [
+        "PFP white polo tee — required for the Day 3 team activity.",
         "Comfortable walking shoes for the tea house activity and city exploring.",
         "Smart casual outfit for the gala dinner (Day 2 evening).",
         "Light, breathable clothing — July in Shenzhen is hot (30–35°C) and very humid.",
@@ -103,7 +104,7 @@ export const retreatData: RetreatData = {
       content: [
         "Day 1 (Arrival): casual — travel comfortably.",
         "Day 2 (Gala Dinner): smart casual / business casual.",
-        "Day 3 (Tea House Activity): casual, comfortable shoes.",
+        "Day 3 (Tea House Activity): company white polo tee, comfortable shoes.",
         "Day 4 (Departure): casual.",
       ],
     },
@@ -218,9 +219,9 @@ export const retreatData: RetreatData = {
         },
         {
           time: "6:30–8:00pm",
-          title: "CEO / EXCO speech + Gala Dinner",
+          title: "CEO / EXCO speech + Banquet Dinner",
           description:
-            "Speech by CEO / EXCO, followed by the Gala Dinner — a Chinese banquet (AV included; beer & soft drinks available).",
+            "Speech by CEO / EXCO, followed by the Banquet Dinner — a Chinese banquet (beer & soft drinks available).",
           dressCode: "Smart casual",
           tag: "highlight",
         },
@@ -255,13 +256,14 @@ export const retreatData: RetreatData = {
           title: "Tea Tasting Ceremony & Incense Appreciation",
           description:
             "Team experience: a Chinese tea tasting ceremony with a tea master, exploring varieties and brewing techniques, plus a herbal incense appreciation session. Free-flow tea and light snacks throughout. Each person takes home a souvenir — 1 can of tea + 1 can of incense.",
+          dressCode: "Company white polo tee",
           tag: "highlight",
         },
         {
           time: "1:00pm onward",
-          title: "Return to hotel",
-          description: "Transfer back to the hotel — afternoon is at leisure.",
-          tag: "travel",
+          title: "Free and easy",
+          description: "Afternoon is yours — rest, explore, or grab lunch nearby.",
+          tag: "free",
         },
         {
           time: "Evening",
@@ -309,13 +311,6 @@ export const retreatData: RetreatData = {
         distance: "~10–15 min walk",
         amapUrl: "https://m.amap.com/search/?query=万象城福田&city=深圳",
         fallbackUrl: "https://maps.google.com/?q=Futian+MixC+Shenzhen",
-      },
-      {
-        name: "Shenzhen Bay MixC (深圳湾万象城)",
-        description: "Shenzhen's premier luxury shopping destination with a waterfront setting and more high-end options. Best reached by metro (Lines 1 or 9 to Shenzhen Bay Park).",
-        distance: "~20 min by metro",
-        amapUrl: "https://m.amap.com/search/?query=深圳湾万象城&city=深圳",
-        fallbackUrl: "https://maps.google.com/?q=Shenzhen+Bay+MixC",
       },
     ],
     food: [
