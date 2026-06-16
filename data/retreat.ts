@@ -1,11 +1,5 @@
 import type { RetreatData } from "@/types/retreat";
 
-// ---------------------------------------------------------------------------
-// EDIT ME: this is the single source of truth for all retreat content.
-// Update the values below and the site will reflect your changes everywhere.
-// Anything wrapped in [ ] is a placeholder — replace with the real details.
-// ---------------------------------------------------------------------------
-
 export const retreatData: RetreatData = {
   overview: {
     title: "Staff Retreat 2026",
@@ -21,7 +15,7 @@ export const retreatData: RetreatData = {
       "Tea house activity Day 3 morning — comfortable shoes",
       "Check out by 12:00 noon on Day 4",
     ],
-    lastUpdated: "13 June 2026",
+    lastUpdated: "16 June 2026",
   },
 
   quickLinks: [
@@ -36,48 +30,59 @@ export const retreatData: RetreatData = {
     {
       title: "Passport validity",
       content: [
-        "Make sure your passport is valid for at least 6 months beyond the retreat dates (15–18 July 2026).",
-        "[PLACEHOLDER] If your passport doesn't meet this requirement, contact the organizing committee before booking flights.",
+        "Make sure your passport is valid for at least 6 months beyond the retreat dates — i.e. valid until at least 18 January 2027.",
+        "If your passport doesn't meet this requirement, renew it before booking flights and contact the organising committee as soon as possible.",
       ],
     },
     {
-      title: "China entry requirements",
+      title: "China entry requirements — by nationality",
       content: [
-        "[PLACEHOLDER] Confirm your visa or visa-free transit eligibility based on your nationality and travel route.",
-        "[PLACEHOLDER] Some nationalities qualify for visa-free entry to Shenzhen for short stays — check the latest rules for your passport before travelling.",
-        "Keep a digital and printed copy of your hotel booking confirmation in case it's requested at immigration.",
+        "Singapore, Malaysia & Thailand passports — 30-day visa-free entry to mainland China under China's unilateral visa exemption policy (extended through December 2026). No visa needed for this trip.",
+        "Hong Kong SAR passports — use your Mainland Travel Permit (回乡证 / 港澳居民来往内地通行证) to enter mainland China, not your HKSAR passport. If you don't have one, apply at the Hong Kong Immigration Department well before you travel.",
+        "Chinese nationals — standard mainland travel documents apply. No visa required.",
+        "All travellers — confirm the latest requirements with your airline closer to the travel date, as policies can change.",
       ],
     },
     {
-      title: "Arrival card / entry QR",
+      title: "Arrival card — how to fill it in online",
       content: [
-        "China uses an online arrival registration system for some travellers. Complete this before or upon arrival at Shenzhen Bao'an Airport (SZX).",
-        "[PLACEHOLDER] Scan the QR code below to access the arrival registration portal, or check with your airline for the latest process.",
+        "China requires foreign nationals to complete an arrival card. You can fill it in online before you land — do it on the plane or right after landing. Scan the QR code in the Before You Go section, or go to https://s.nia.gov.cn/ArrivalCardFillingPhone/ on your mobile browser.",
+        "Step 1 — Tap 'Entry Filing', read and agree to the application instructions.",
+        "Step 2 — Select your Document Type, then upload a photo of your passport's personal information page. Tap the image to make corrections if needed.",
+        "Step 3 — Check that your details are correct, then fill in your arrival information for this trip.",
+        "Step 4 — Continue filling in your personal information. The system will list appropriate entry policies based on what you declare — select the correct one (e.g. Visa-Free for SG / MY / TH staff).",
+        "Step 5 — If you hold a visa, enter your visa number. If entering under the 30-day Visa-Free policy, indicate whether your travel document has been lost or stolen.",
+        "Step 6 — Fill in your trip details. Fields marked with * are required.",
+        "Step 7 — To add travelling companions, tap ADD at the top right. You can register multiple people on one submission.",
+        "Step 8 — Review the declaration, sign, and tap SUBMIT. Download the arrival card receipt to your phone or send it to your email — you may be asked to show it at the immigration counter.",
+        "Alternative: the NIA 12367 app (scan the separate QR code in the Before You Go section) can also be used to complete this.",
       ],
     },
     {
       title: "Immigration & entry notes",
       content: [
-        "Have your passport, return flight details, and hotel address (in Chinese — see Hotel section) ready when you land.",
-        "[PLACEHOLDER] Add any country-specific notes here, e.g. fingerprint scanning, customs declarations, etc.",
+        "Have your passport (or Mainland Travel Permit for HK staff), return flight details, and hotel address in Chinese (see Hotel section) ready when you land.",
+        "Fingerprint scanning is standard at Shenzhen immigration — follow the officer's instructions.",
+        "Customs: declare items valued over CNY 5,000 / USD 750. Cash over USD 5,000 must also be declared.",
+        "Keep a digital and printed copy of your hotel booking confirmation in case it is requested at immigration.",
       ],
     },
     {
       title: "Roaming & eSIM",
       content: [
-        "[PLACEHOLDER] Recommend checking with your mobile carrier for a China roaming pack, or purchasing a local eSIM (e.g. via your carrier's app or an eSIM provider) before you fly.",
-        "Hotel wifi will be available — see Hotel section for details.",
-        "Note: some common apps and websites are restricted in China. A VPN may be useful if you need access to services like Gmail, WhatsApp, or social media (set this up before you arrive).",
+        "Check with your mobile carrier for a China roaming pack, or purchase a local eSIM before you fly (available through your carrier's app or providers such as Airalo, Nomad, or Holafly).",
+        "Hotel WiFi will be available throughout your stay — see the Hotel section for details.",
+        "Important: Google, WhatsApp, Instagram, and Facebook are blocked in mainland China. Set up a VPN before you arrive if you need access — most VPN apps cannot be downloaded or activated once you are already in China.",
       ],
     },
     {
       title: "Apps to install before you go",
       content: [
-        "WeChat — messaging and the easiest way to pay almost everywhere.",
-        "Alipay — alternative payment app, also widely accepted.",
-        "Didi — China's main ride-hailing app (similar to Grab/Uber).",
-        "[PLACEHOLDER] A translation app (e.g. Google Translate with offline Chinese pack, or Pleco).",
-        "[PLACEHOLDER] Any company communication apps needed for the retreat.",
+        "WeChat — messaging and the easiest way to pay almost everywhere. Set up your Wallet (link a card) before you fly.",
+        "Alipay — alternative payment app, also widely accepted. Try the Tour Pass feature if your card won't link to WeChat.",
+        "Didi — China's main ride-hailing app (similar to Grab/Uber). Set your destination in English; the app translates for the driver.",
+        "Google Translate — download the offline Simplified Chinese pack. The camera mode is great for reading menus and signs.",
+        "Any company communication apps needed for the retreat.",
       ],
     },
     {
@@ -85,40 +90,41 @@ export const retreatData: RetreatData = {
       content: [
         "Comfortable walking shoes for the tea house activity and city exploring.",
         "Smart casual outfit for the gala dinner (Day 2 evening).",
-        "Light layers — see weather note below for the season's typical conditions.",
-        "Universal power adapter (see plug type note in Useful Shenzhen Info).",
-        "[PLACEHOLDER] Any company merchandise, name badges, or materials staff should bring.",
+        "Light, breathable clothing — July in Shenzhen is hot (30–35°C) and very humid.",
+        "Small umbrella or packable rain jacket — afternoon thunderstorms are common in July.",
+        "Universal power adapter (Type A / Type I sockets at 220V — see Useful Shenzhen Info).",
+        "Sunscreen — essential if you plan any outdoor time.",
       ],
     },
     {
       title: "Dress code overview",
       content: [
         "Day 1 (Arrival): casual — travel comfortably.",
-        "Day 2 (Gala Dinner): smart casual / business casual recommended.",
-        "Day 3 (Tea House Activity): casual, comfortable clothing and shoes.",
+        "Day 2 (Gala Dinner): smart casual / business casual.",
+        "Day 3 (Tea House Activity): casual, comfortable shoes.",
         "Day 4 (Departure): casual.",
       ],
     },
     {
       title: "Weather overview",
       content: [
-        "[PLACEHOLDER] Shenzhen in July is typically hot and humid with a chance of rain — pack light, breathable clothing, an umbrella, and stay hydrated.",
-        "[PLACEHOLDER] Replace with an actual forecast closer to the retreat date.",
+        "Shenzhen in July is hot (30–35°C), very humid, and prone to afternoon thunderstorms. Pack light, breathable clothing, a small umbrella, and stay hydrated.",
+        "Air-conditioned malls and the hotel offer good respite during the hottest parts of the day. Morning and evening are the best times for outdoor activities.",
       ],
     },
     {
       title: "Payment methods — quick overview",
       content: [
         "China is largely a mobile-payment society. WeChat Pay and Alipay are accepted almost everywhere — set these up with a linked card before you arrive if possible.",
-        "Cash (CNY) is useful as backup, especially for small vendors.",
-        "International cards are accepted at the hotel and larger malls, but less common at street vendors. See Useful Shenzhen Info for full details.",
+        "Cash (CNY) is useful as backup, especially at small vendors and street food stalls.",
+        "International cards are accepted at the hotel and larger malls, but less common elsewhere. See Useful Shenzhen Info for full details.",
       ],
     },
     {
       title: "Other pre-trip reminders",
       content: [
-        "[PLACEHOLDER] Submit any dietary requirements or allergies to the organizing committee ahead of time.",
-        "[PLACEHOLDER] Confirm your flight details and airport transfer arrangements with logistics.",
+        "Submit any dietary requirements or allergies to the organising committee ahead of time.",
+        "Confirm your flight details and airport transfer arrangements with the logistics coordinator.",
         "Save the Contacts section to your phone before you fly — it works without internet once saved.",
       ],
     },
@@ -127,34 +133,38 @@ export const retreatData: RetreatData = {
   hotel: {
     name: "Hilton Shenzhen Futian",
     overview:
-      "Our home base for the retreat. Centrally located in the Futian district, close to shopping, dining, and transport links — including the COCO Park area.",
-    addressEn: "[PLACEHOLDER] Hilton Shenzhen Futian, Fuhua 3rd Road, Futian District, Shenzhen, Guangdong, China",
-    addressZh: "[占位符] 深圳福田希尔顿酒店，广东省深圳市福田区福华三路",
+      "Our home base for the retreat. Centrally located in the Futian CBD, the hotel sits directly above Shopping Park metro station — COCO Park, malls, dining, and Lianhuashan Park are all within easy reach.",
+    addressEn: "Tower B, Great China International Finance Centre, No. 1003 Shennan Avenue, Futian District, Shenzhen, Guangdong 518000, China",
+    addressZh: "广东省深圳市福田区深南大道1003号大中华国际金融中心B座",
     mapUrl: "https://maps.google.com/?q=Hilton+Shenzhen+Futian",
-    phone: "+86 755 0000 0000",
-    website: "https://www.hilton.com",
+    phone: "+86 755 2130 8888",
+    website: "https://www.hilton.com/en/hotels/szxsfhi-hilton-shenzhen-futian/",
     checkIn: "3:00pm onward (Day 1, Tue 15 July)",
     checkOut: "By 12:00 noon (Day 4, Fri 18 July)",
-    breakfast: "[PLACEHOLDER] Daily, approx. 6:30am–10:00am, hotel restaurant (level TBC)",
+    breakfast: "Daily, approx. 6:30am–10:30am at Mis.U Restaurant (confirm exact floor with hotel at check-in)",
     wifi: {
-      network: "[PLACEHOLDER] Hilton_Honors / Hilton Guest WiFi",
-      password: "[PLACEHOLDER] Provided at check-in",
+      network: "Hilton Guest WiFi (confirm exact network name at check-in)",
+      password: "Provided at check-in",
       notes: "Free for all guests — connect and follow the on-screen instructions in your room.",
     },
     amenities: [
-      "[PLACEHOLDER] Swimming pool",
-      "[PLACEHOLDER] Fitness centre",
-      "[PLACEHOLDER] Executive lounge",
-      "[PLACEHOLDER] On-site restaurants and bar",
-      "[PLACEHOLDER] Business centre",
+      "Year-round outdoor swimming pool",
+      "Fitness centre (24 hours)",
+      "Spa & wellness centre",
+      "Sauna",
+      "Mis.U Restaurant & lobby bar",
+      "Business centre",
+      "Shopping Park metro (Lines 1 & 4) at front door",
     ],
     nearbyEssentials: [
-      { name: "[PLACEHOLDER] Convenience store (7-Eleven / Family Mart)", type: "Convenience", distance: "~5 min walk" },
-      { name: "[PLACEHOLDER] Pharmacy", type: "Pharmacy", distance: "~5–10 min walk" },
-      { name: "[PLACEHOLDER] ATM / Bank", type: "ATM", distance: "In hotel lobby" },
+      { name: "Shopping Park Metro Station (Lines 1 & 4)", type: "Metro", distance: "At hotel front door" },
+      { name: "COCO Park — dining, shopping & bar street", type: "Shopping", distance: "~5–10 min walk" },
+      { name: "FamilyMart / 7-Eleven", type: "Convenience", distance: "~5 min walk" },
+      { name: "Watsons (屈臣氏)", type: "Pharmacy", distance: "~10 min (COCO Park)" },
+      { name: "ATM — Bank of China", type: "ATM", distance: "Hotel lobby & COCO Park" },
     ],
     surroundingsNote:
-      "The hotel sits in the Futian / COCO Park area — one of Shenzhen's most convenient districts, with malls, restaurants, cafes, and metro access all within walking distance. See 'Around the Hotel' for our picks.",
+      "Shopping Park metro is at your front door, COCO Park with its restaurants and bar street is a short walk away, and Lianhuashan Park is about 2 km north for those who want an early morning stroll.",
   },
 
   itinerary: [
@@ -200,26 +210,20 @@ export const retreatData: RetreatData = {
         {
           time: "Morning",
           title: "Breakfast at hotel",
-          description: "Start the day at the hotel restaurant.",
+          description: "Start the day at Mis.U Restaurant.",
           tag: "meal",
         },
         {
-          time: "Lunch",
+          time: "Morning–Afternoon",
           title: "Free time",
-          description: "Lunch and the rest of the morning are free — explore, rest, or grab a coffee nearby.",
-          tag: "free",
-        },
-        {
-          time: "Afternoon",
-          title: "Free time / break",
-          description: "Free and easy before the evening's main event.",
+          description: "Free and easy before the evening's main event — explore, rest, or grab a coffee nearby.",
           tag: "free",
         },
         {
           time: "6:30–8:00pm",
           title: "CEO / EXCO speech + Gala Dinner",
           description:
-            "Speech by CEO / EXCO, followed by the Gala Dinner — a Chinese banquet (CNY 300/pax, AV included; beer & soft drinks on a 50/50 split).",
+            "Speech by CEO / EXCO, followed by the Gala Dinner — a Chinese banquet (AV included; beer & soft drinks available).",
           dressCode: "Smart casual",
           tag: "highlight",
         },
@@ -253,7 +257,7 @@ export const retreatData: RetreatData = {
           time: "10:00am–1:00pm",
           title: "Tea Tasting Ceremony & Incense Appreciation",
           description:
-            "Team experience: a Chinese tea tasting ceremony with a tea master, exploring varieties and brewing techniques, plus a herbal incense appreciation session. Free-flow tea and light snacks throughout. Each person takes home a souvenir: 1 can of tea + 1 can of incense.",
+            "Team experience: a Chinese tea tasting ceremony with a tea master, exploring varieties and brewing techniques, plus a herbal incense appreciation session. Free-flow tea and light snacks throughout. Each person takes home a souvenir — 1 can of tea + 1 can of incense.",
           tag: "highlight",
         },
         {
@@ -283,13 +287,13 @@ export const retreatData: RetreatData = {
           tag: "highlight",
         },
         {
-          time: "[PLACEHOLDER]",
+          time: "Throughout the morning",
           title: "Airport transfers",
           description: "[PLACEHOLDER] Transfer details and timing to be confirmed by logistics, based on individual flight times.",
           tag: "travel",
         },
         {
-          time: "[PLACEHOLDER]",
+          time: "Varies",
           title: "Flights home",
           description: "Safe travels! Double-check your flight time and have your travel documents ready.",
           tag: "travel",
@@ -301,83 +305,120 @@ export const retreatData: RetreatData = {
   aroundHotel: {
     malls: [
       {
-        name: "[PLACEHOLDER] COCO Park",
-        nameZh: "[占位符] 购物公园",
-        description: "Major outdoor/indoor shopping and dining complex in Futian — a short walk from the hotel.",
-        distance: "~10–15 min walk",
+        name: "COCO Park (购物公园)",
+        nameZh: "购物公园",
+        description: "The main outdoor-indoor shopping and dining complex in Futian — four floors of international and local brands, plus COCO Park's famous bar street along the eastern side. Shopping Park metro is right outside.",
+        distance: "~5–10 min walk",
         mapUrl: "https://maps.google.com/?q=COCO+Park+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] MIXC / MixC World",
-        description: "Large mall with international brands, dining, and entertainment.",
-        distance: "[PLACEHOLDER]",
-        mapUrl: "https://maps.google.com/?q=MixC+Shenzhen",
+        name: "Futian MIXC (万象城)",
+        description: "Large upscale mall with international brands, a cinema, and a wide range of dining options — good for an afternoon browse.",
+        distance: "~10–15 min walk",
+        mapUrl: "https://maps.google.com/?q=Futian+MixC+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] Add more malls here",
-        description: "Replace with your own picks near the hotel.",
+        name: "Shenzhen Bay MixC (深圳湾万象城)",
+        description: "Shenzhen's premier luxury shopping destination with a waterfront setting and more high-end options. Best reached by metro (Lines 1 or 9 to Shenzhen Bay Park).",
+        distance: "~20 min by metro",
+        mapUrl: "https://maps.google.com/?q=Shenzhen+Bay+MixC",
       },
     ],
     food: [
       {
-        name: "[PLACEHOLDER] Local Cantonese restaurant",
-        description: "Great for dim sum and classic Cantonese dishes.",
-        distance: "[PLACEHOLDER]",
+        name: "Jin Yue Xuan (金悦轩)",
+        description: "Popular Cantonese restaurant in COCO Park — excellent dim sum in the mornings and Chinese banquet-style dinners. Good for groups.",
+        distance: "3/F COCO Park (~10 min walk)",
+        mapUrl: "https://maps.google.com/?q=Jin+Yue+Xuan+COCO+Park+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] Hot pot restaurant",
-        description: "Popular hot pot spot near the hotel — good for groups.",
-        distance: "[PLACEHOLDER]",
+        name: "Tanyu Hot Pot (谭鸭血)",
+        description: "Buzzy hotpot chain known for its Sichuan-style broth and duck-blood tofu. Great for a group dinner — expect a queue during peak hours.",
+        distance: "Xinghe COCO Park (~10 min walk)",
+        mapUrl: "https://maps.google.com/?q=Tanyu+Xinghe+COCO+Park+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] Add more food spots here",
-        description: "Replace with your own recommendations.",
+        name: "Ah Yuan Lai (阿元来)",
+        description: "Michelin-recognised Taiwanese spot — known for its affordable signature braised pork rice and braised dishes.",
+        distance: "COCO Park (~10 min walk)",
+      },
+      {
+        name: "MULINO ALIMENTARI",
+        description: "Italian restaurant in COCO Park — solid pizza, pasta, and gelato if you're after a break from Chinese food.",
+        distance: "3/F COCO Park (~10 min walk)",
       },
     ],
     cafes: [
       {
-        name: "[PLACEHOLDER] Local cafe chain",
-        description: "Good coffee and a quiet spot to recharge.",
-        distance: "[PLACEHOLDER]",
+        name: "% Arabica",
+        description: "Stylish Japanese-origin specialty coffee — one of the most popular cafes in COCO Park. Worth the visit for a good flat white.",
+        distance: "COCO Park (~10 min walk)",
+        mapUrl: "https://maps.google.com/?q=Arabica+Coffee+COCO+Park+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] Add more cafes here",
-        description: "Replace with your own picks.",
+        name: "Heytea (喜茶)",
+        description: "Go-to brand for fresh-fruit milk teas and cheese teas — a quintessential Shenzhen experience. Multiple locations in and around COCO Park.",
+        distance: "~10 min walk",
+      },
+      {
+        name: "Manner Coffee",
+        description: "Affordable, no-fuss specialty coffee chain with quick service and solid espresso drinks — perfect for a morning coffee before any activities.",
+        distance: "~10 min walk",
       },
     ],
     nightlife: [
       {
-        name: "[PLACEHOLDER] Rooftop bar",
-        description: "Relaxed spot for drinks with a view.",
-        distance: "[PLACEHOLDER]",
+        name: "COCO Park Bar Street",
+        description: "A street of bars along the eastern edge of COCO Park — Demon Bar, Shark Wine Lounge & Restaurant, and Baron are popular picks for relaxed drinks after dinner.",
+        distance: "~10 min walk",
+        mapUrl: "https://maps.google.com/?q=COCO+Park+Bar+Street+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] Add more bars / nightlife here",
-        description: "Replace with your own picks.",
+        name: "McCawley's Irish Bar",
+        description: "Popular expat-friendly Irish pub opposite COCO Park at Shopping Park — good for a casual pint in a familiar setting.",
+        distance: "~10 min walk",
+      },
+      {
+        name: "Glass Hammer",
+        description: "Craft beer bar near Shopping Park with a solid selection of local and imported brews — low-key and relaxed.",
+        distance: "~10 min walk",
       },
     ],
     essentials: [
       {
-        name: "[PLACEHOLDER] 7-Eleven / Family Mart",
-        description: "Convenience store for snacks, drinks, and essentials.",
+        name: "FamilyMart / 7-Eleven",
+        description: "Multiple convenience stores around COCO Park for snacks, drinks, umbrellas, and travel essentials.",
         distance: "~5 min walk",
       },
       {
-        name: "[PLACEHOLDER] Pharmacy",
-        description: "For any over-the-counter medication needs.",
-        distance: "~5–10 min walk",
+        name: "Watsons (屈臣氏)",
+        description: "Pharmacy and personal care chain — stock up on sunscreen, over-the-counter medication, or toiletries.",
+        distance: "~10 min (inside COCO Park)",
+      },
+      {
+        name: "Bank of China ATM",
+        description: "Accepts international cards. Also available inside COCO Park and MIXC if you need cash.",
+        distance: "Hotel lobby",
       },
     ],
     sightseeing: [
       {
-        name: "[PLACEHOLDER] Lianhuashan Park",
-        description: "Green space with skyline views, popular for a relaxed walk.",
-        distance: "[PLACEHOLDER]",
+        name: "Lianhuashan Park (莲花山公园)",
+        description: "Shenzhen's most beloved public park — free entry, hilltop Deng Xiaoping statue, panoramic city views, and lovely walking trails. Best early morning or late afternoon to beat the heat.",
+        distance: "~2.2 km (~25 min walk or short Didi ride)",
         mapUrl: "https://maps.google.com/?q=Lianhuashan+Park+Shenzhen",
       },
       {
-        name: "[PLACEHOLDER] Add more sights here",
-        description: "Replace with your own picks for free time exploring.",
+        name: "Ping An Finance Centre (平安金融中心)",
+        description: "The 116th-floor sky observation deck of Shenzhen's iconic supertall — one of the world's highest viewing platforms. Visible from COCO Park. Tickets should be booked in advance.",
+        distance: "~15 min by Didi",
+        mapUrl: "https://maps.google.com/?q=Ping+An+Finance+Centre+Shenzhen",
+      },
+      {
+        name: "Futian Mangrove Nature Reserve (福田红树林)",
+        description: "Peaceful coastal mangrove wetland and bird sanctuary — a pleasant contrast to the urban bustle. Short Didi ride south toward Shenzhen Bay.",
+        distance: "~15–20 min by Didi",
+        mapUrl: "https://maps.google.com/?q=Futian+Mangrove+Nature+Reserve+Shenzhen",
       },
     ],
   },
@@ -388,51 +429,54 @@ export const retreatData: RetreatData = {
       content: [
         "Mobile payment is the default in Shenzhen — most shops, restaurants, and even street stalls expect WeChat Pay or Alipay.",
         "Link an international card to WeChat Pay or Alipay before you arrive (both apps support this for many foreign cards).",
-        "If linking a card doesn't work, some hotels and currency exchanges can help top up a balance with cash.",
+        "If linking a card doesn't work, top up a balance at the hotel front desk or a bank branch using cash.",
       ],
     },
     {
       title: "Cards & cash",
       content: [
-        "International credit/debit cards are accepted at the hotel, large malls, and major chains — but not always at smaller venues.",
-        "Carry some cash (CNY) for backup, especially for small purchases, taxis, or street food.",
-        "[PLACEHOLDER] Note on currency exchange location/process if needed.",
+        "International Visa/Mastercard cards are accepted at the hotel, large malls (COCO Park, MIXC), and major chains — but not always at smaller venues or street stalls.",
+        "Carry some CNY cash as backup, especially for small purchases, taxis, and street food.",
+        "Currency exchange is available at the hotel front desk, Bank of China in COCO Park, and at Shenzhen Bao'an Airport on arrival.",
       ],
     },
     {
       title: "Didi (ride-hailing)",
       content: [
         "Didi is the easiest way to get around — similar to Grab/Uber. Download the app and link a payment method before you arrive.",
-        "You can usually set your destination in English; the app will translate for the driver.",
+        "You can set your destination in English; the app translates for the driver.",
         "Have your hotel address in Chinese (see Hotel section) ready to paste in if needed.",
       ],
     },
     {
       title: "Metro",
       content: [
-        "Shenzhen's metro is clean, cheap, and easy to use, with English signage throughout.",
-        "Pay with WeChat Pay / Alipay QR codes directly at the gates — no need for a separate card.",
-        "[PLACEHOLDER] Note nearest metro station to the hotel and useful lines.",
+        "Shopping Park Station (购物公园站), Lines 1 & 4, is directly outside the hotel front door — no walking needed to get to the metro.",
+        "Shenzhen's metro has English signage throughout and is clean, cheap, and easy to navigate.",
+        "Line 1 runs west toward Shenzhen Bay and east toward Luohu / Lo Wu (Hong Kong border crossing).",
+        "Pay with WeChat Pay or Alipay QR codes directly at the gates — no separate card or top-up needed.",
       ],
     },
     {
       title: "Internet access",
       content: [
-        "Hotel wifi is available throughout your stay (see Hotel section for details).",
-        "Some apps and websites (e.g. Google, WhatsApp, Instagram, Facebook) are restricted in mainland China — set up a VPN before you travel if you need access.",
-        "Local eSIM/roaming will give you mobile data for maps, Didi, and translation apps on the go.",
+        "Hotel WiFi is available throughout your stay (see Hotel section for details).",
+        "Google, WhatsApp, Instagram, and Facebook are blocked in mainland China. Set up a VPN before you travel if you need access — most VPN apps must be downloaded and activated before entering China.",
+        "A local eSIM or roaming pack will give you mobile data for maps, Didi, and translation apps when you're out.",
       ],
     },
     {
       title: "Power plugs",
       content: [
-        "[PLACEHOLDER] China commonly uses Type A, C, and I sockets (220V). A universal travel adapter is recommended.",
+        "China uses Type A (two flat pins) and Type I (two slanted pins) sockets at 220V / 50Hz. A universal travel adapter is recommended.",
+        "Most modern phone and laptop chargers are dual-voltage (100–240V) — check the label on your charger. If it shows only 110V, you'll need a voltage converter as well.",
       ],
     },
     {
       title: "Language tips",
       content: [
         "English is limited outside hotels and major malls — a translation app goes a long way.",
+        "Google Translate's camera mode (with the offline Simplified Chinese pack downloaded) is great for reading menus and signs.",
         "Learning a few basic Mandarin phrases (see below) is appreciated by locals and genuinely useful.",
         "Staff with Mandarin skills are a great resource if you get stuck — don't be shy to ask!",
       ],
@@ -440,22 +484,24 @@ export const retreatData: RetreatData = {
     {
       title: "Local etiquette",
       content: [
-        "[PLACEHOLDER] Tipping is not customary in mainland China.",
-        "[PLACEHOLDER] Add any other etiquette notes relevant to your group.",
+        "Tipping is not customary in mainland China — at restaurants, hotels, or in taxis.",
+        "Bargaining is common at markets but not in fixed-price shops or malls.",
+        "Queue-jumping can happen — don't take it personally. A calm, firm presence usually works.",
       ],
     },
     {
       title: "Safety reminders",
       content: [
-        "Shenzhen is generally very safe, including at night. Usual travel precautions apply — keep valuables secure and stay aware in crowds.",
-        "Keep a digital copy of your passport and travel documents accessible.",
-        "Save the Emergency Contacts section to your phone before you arrive (works offline once saved).",
+        "Shenzhen is generally very safe, including at night. Standard travel precautions apply — keep valuables secure and stay aware in busy crowds.",
+        "Keep a digital copy of your passport and travel documents accessible on your phone.",
+        "Save the Emergency Contacts section before you arrive — it works offline once saved.",
       ],
     },
     {
       title: "Weather note",
       content: [
-        "[PLACEHOLDER] July in Shenzhen is typically hot, humid, and occasionally rainy. Pack light clothing, an umbrella, and stay hydrated.",
+        "July in Shenzhen is hot (30–35°C), very humid, and prone to afternoon thunderstorms. Pack light, breathable clothing, a small umbrella, and stay hydrated.",
+        "Air-conditioned malls and the hotel are good retreats during peak heat. Morning and evening are the best times for outdoor activities.",
       ],
     },
     {
@@ -477,34 +523,36 @@ export const retreatData: RetreatData = {
     { zh: "我可以用微信支付吗？", pinyin: "wǒ kě yǐ yòng wēi xìn zhī fù ma?", en: "Can I pay with WeChat Pay?" },
     { zh: "请带我去这个地址", pinyin: "qǐng dài wǒ qù zhè ge dì zhǐ", en: "Please take me to this address (for taxi/Didi)" },
     { zh: "我需要帮助", pinyin: "wǒ xū yào bāng zhù", en: "I need help" },
+    { zh: "太贵了", pinyin: "tài guì le", en: "Too expensive (for bargaining at markets)" },
+    { zh: "好吃！", pinyin: "hǎo chī!", en: "Delicious!" },
   ],
 
   paymentMethods: [
     {
       method: "WeChat Pay",
       description: "The most widely used mobile payment method in Shenzhen — link an international card before you travel.",
-      tips: ["Works almost everywhere, including small stalls and the metro.", "Set up the 'Wallet' section in WeChat ahead of time."],
+      tips: ["Works almost everywhere, including small stalls and the metro.", "Set up the 'Wallet' section in WeChat and link your card ahead of time."],
     },
     {
       method: "Alipay",
-      description: "Equally widely accepted, with a dedicated 'Tour Pass' option for international visitors in some cases.",
-      tips: ["Good backup if WeChat Pay isn't working.", "[PLACEHOLDER] Note any group-specific recommendation."],
+      description: "Equally widely accepted. The Tour Pass feature is designed for international visitors and lets you top up with a foreign Visa/Mastercard more easily.",
+      tips: ["Good backup if WeChat Pay isn't working.", "Tour Pass top-up works with most Visa/Mastercard cards — set it up in the Alipay app before you fly."],
     },
     {
       method: "Cash (CNY)",
-      description: "Useful as backup, especially for very small vendors who may not take digital payments from foreign accounts.",
-      tips: ["[PLACEHOLDER] Note where to exchange currency on arrival."],
+      description: "Useful as backup, especially at very small vendors who may not accept digital payments from foreign accounts.",
+      tips: ["Exchange at the hotel front desk, Bank of China in COCO Park, or at Shenzhen Bao'an Airport on arrival."],
     },
     {
       method: "International cards",
-      description: "Accepted at the hotel and major malls, but not guaranteed elsewhere.",
-      tips: ["Always carry a backup payment method when heading out."],
+      description: "Accepted at the hotel and major malls (COCO Park, MIXC), but not guaranteed at smaller shops, street food stalls, or local restaurants.",
+      tips: ["Always carry a backup payment method when heading out.", "Visa/Mastercard are more widely accepted than Amex."],
     },
   ],
 
   contacts: [
     {
-      name: "[PLACEHOLDER] Retreat Committee — Lead Organizer",
+      name: "[PLACEHOLDER] Retreat Committee — Lead Organiser",
       role: "Overall retreat coordination",
       phone: "+65 0000 0000",
       notes: "First point of contact for general questions during the retreat.",
@@ -515,7 +563,7 @@ export const retreatData: RetreatData = {
       phone: "+65 0000 0000",
     },
     {
-      name: "[PLACEHOLDER] Company Internal Contact (HR/Admin)",
+      name: "[PLACEHOLDER] Company Internal Contact (HR / Admin)",
       role: "HR or admin support for retreat-related matters",
       phone: "+65 0000 0000",
     },
@@ -525,17 +573,17 @@ export const retreatData: RetreatData = {
     { label: "China Police", number: "110", notes: "For emergencies requiring police assistance." },
     { label: "China Ambulance", number: "120", notes: "Medical emergencies." },
     { label: "China Fire", number: "119", notes: "Fire emergencies." },
-    { label: "Hilton Shenzhen Futian — Front Desk", number: "+86 755 0000 0000", notes: "[PLACEHOLDER] Confirm hotel front desk number." },
-    { label: "[PLACEHOLDER] Embassy / Consulate", number: "+86 00 0000 0000", notes: "Add relevant embassy contact for your nationality if travelling far from home." },
+    { label: "Hilton Shenzhen Futian — Front Desk", number: "+86 755 2130 8888", notes: "24-hour hotel front desk." },
+    { label: "[PLACEHOLDER] Embassy / Consulate", number: "+86 00 0000 0000", notes: "Add relevant embassy contact for your nationality if needed." },
     { label: "[PLACEHOLDER] Retreat Emergency Line", number: "+65 0000 0000", notes: "24-hour contact for the retreat committee during the trip." },
   ],
 
   qrItems: [
     {
       id: "arrival-card",
-      label: "China Arrival Registration",
-      description: "[PLACEHOLDER] Scan to access the online arrival registration portal before landing in Shenzhen.",
-      data: "https://www.example.com/china-arrival-card-placeholder",
+      label: "China Arrival Card (Mobile)",
+      description: "Official China Immigration portal — scan to fill in your arrival card online. Complete this on the plane or right after landing. Tap 'Entry Filing' to begin.",
+      data: "https://s.nia.gov.cn/ArrivalCardFillingPhone/",
     },
     {
       id: "hotel-location",
