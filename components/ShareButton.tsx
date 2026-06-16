@@ -12,33 +12,27 @@ export default function ShareButton({ title }: ShareButtonProps) {
 
   const handleShare = async () => {
     const url = typeof window !== "undefined" ? window.location.href : "";
-
     if (navigator.share) {
-      try {
-        await navigator.share({ title, url });
-      } catch {
-        // User cancelled — no action needed.
-      }
+      try { await navigator.share({ title, url }); } catch { /* cancelled */ }
       return;
     }
-
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 1500);
-    } catch {
-      // Clipboard API unavailable — silently ignore.
-    }
+    } catch { /* unavailable */ }
   };
 
   return (
-    <button
-      type="button"
-      onClick={handleShare}
-      className="flex w-full items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-800 shadow-sm ring-1 ring-slate-100 active:bg-slate-50"
-    >
-      {copied ? <Check size={18} /> : <Share2 size={18} />}
-      {copied ? "Link copied" : "Share this guide"}
-    </button>
+    <div className="flex justify-center">
+      <button
+        type="button"
+        onClick={handleShare}
+        className="flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-medium text-slate-400 transition-colors hover:text-slate-600 active:text-slate-700"
+      >
+        {copied ? <Check size={13} /> : <Share2 size={13} />}
+        {copied ? "Link copied" : "Share this guide"}
+      </button>
+    </div>
   );
 }

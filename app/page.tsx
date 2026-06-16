@@ -1,7 +1,8 @@
-import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, ShoppingBag } from "lucide-react";
+import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone } from "lucide-react";
 import { retreatData } from "@/data/retreat";
 import Section from "@/components/Section";
 import SectionCard from "@/components/SectionCard";
+import SectionImage from "@/components/SectionImage";
 import QuickActionButton from "@/components/QuickActionButton";
 import InfoAccordion from "@/components/InfoAccordion";
 import ContactCard from "@/components/ContactCard";
@@ -10,6 +11,7 @@ import LinkButton from "@/components/LinkButton";
 import QRBlock from "@/components/QRBlock";
 import CopyField from "@/components/CopyField";
 import PlaceItem from "@/components/PlaceItem";
+import AppCard from "@/components/AppCard";
 import ShareButton from "@/components/ShareButton";
 import PrintButton from "@/components/PrintButton";
 import BottomNav from "@/components/BottomNav";
@@ -28,11 +30,12 @@ export default function Home() {
     contacts,
     emergencyContacts,
     qrItems,
+    appsToDownload,
   } = retreatData;
 
   const arrivalQr = qrItems.find((q) => q.id === "arrival-card");
-  const hotelQr = qrItems.find((q) => q.id === "hotel-location");
-  const pdfQr = qrItems.find((q) => q.id === "pdf-backup");
+  const hotelQr   = qrItems.find((q) => q.id === "hotel-location");
+  const pdfQr     = qrItems.find((q) => q.id === "pdf-backup");
 
   return (
     <>
@@ -78,21 +81,49 @@ export default function Home() {
           </div>
         </Section>
 
+        {/* APPS TO DOWNLOAD */}
+        <Section id="apps" title="Apps to Download" description="Install these before you leave — some aren't available in China.">
+          <SectionCard title="Must-have">
+            <div className="flex items-center gap-2 mb-3">
+              <Smartphone size={15} className="shrink-0 text-teal-500" />
+              <p className="text-xs text-slate-500">Install and set up before you fly — may be hard to access once in China.</p>
+            </div>
+            <div className="flex flex-col gap-3">
+              {appsToDownload.mustHave.map((app) => (
+                <AppCard key={app.name} app={app} />
+              ))}
+            </div>
+          </SectionCard>
+
+          <SectionCard title="Nice to have">
+            <div className="flex flex-col gap-3">
+              {appsToDownload.niceToHave.map((app) => (
+                <AppCard key={app.name} app={app} />
+              ))}
+            </div>
+          </SectionCard>
+        </Section>
+
         {/* HOTEL */}
         <Section id="hotel" title="Hotel" description={hotel.name}>
+          <SectionImage src={hotel.image} alt={hotel.name} />
+
           <SectionCard>
             <p className="text-sm leading-relaxed text-slate-600">{hotel.overview}</p>
           </SectionCard>
 
           <div className="flex flex-col gap-2">
             <CopyField label="Address (English)" value={hotel.addressEn} />
-            <CopyField label="Address (Chinese — show this to taxi / Didi drivers)" value={hotel.addressZh} />
+            <CopyField label="Address (Chinese — show this to Didi / taxi drivers)" value={hotel.addressZh} />
           </div>
 
           <div className="grid grid-cols-2 gap-2">
-            <LinkButton href={hotel.mapUrl} label="Open in Maps" icon={MapPin} variant="primary" />
+            <LinkButton href={hotel.amapUrl} label="Open in Amap" icon={MapPin} variant="primary" />
             <LinkButton href={`tel:${hotel.phone.replace(/[^+\d]/g, "")}`} label="Call hotel" icon={Phone} external={false} />
           </div>
+          {hotel.fallbackUrl && (
+            <LinkButton href={hotel.fallbackUrl} label="Open in Google Maps" icon={MapPin} variant="ghost" />
+          )}
 
           {hotelQr && <QRBlock item={hotelQr} />}
 
@@ -285,7 +316,7 @@ export default function Home() {
 
           <SectionCard title="One more thing">
             <div className="flex items-center gap-2 text-sm text-slate-500">
-              <ShoppingBag size={16} className="shrink-0 text-teal-500" />
+              <Smartphone size={16} className="shrink-0 text-teal-500" />
               <span>Save this page to your home screen for one-tap access all retreat long.</span>
             </div>
             <p className="mt-2 text-xs text-slate-400">

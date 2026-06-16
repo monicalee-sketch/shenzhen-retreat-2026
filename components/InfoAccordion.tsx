@@ -13,26 +13,33 @@ export default function InfoAccordion({ title, content, defaultOpen = false }: I
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-3xl bg-white shadow-sm ring-1 ring-slate-100">
+    <div className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-center justify-between gap-3 px-5 py-4 text-left"
+        className="flex w-full items-center justify-between gap-3 px-4 py-3.5 text-left"
         aria-expanded={open}
       >
-        <span className="text-sm font-semibold text-slate-900">{title}</span>
+        <span className="text-sm font-semibold text-slate-800">{title}</span>
         <ChevronDown
-          size={18}
+          size={16}
           className={`shrink-0 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
-      {open && (
-        <div className="flex flex-col gap-2 px-5 pb-4 text-sm leading-relaxed text-slate-600">
+
+      <div
+        className={`overflow-hidden transition-all duration-200 ease-in-out ${
+          open ? "max-h-[600px]" : "max-h-0"
+        }`}
+      >
+        <div className="flex flex-col gap-2.5 border-t border-slate-100 px-4 py-3.5">
           {content.map((line, i) => (
-            <p key={i}>{line}</p>
+            <p key={i} className="text-sm leading-relaxed text-slate-600">
+              {line}
+            </p>
           ))}
         </div>
-      )}
+      </div>
     </div>
   );
 }

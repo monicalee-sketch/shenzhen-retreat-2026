@@ -7,11 +7,11 @@ import {
   Wallet,
   ShoppingBag,
   PhoneCall,
+  Smartphone,
   type LucideIcon,
 } from "lucide-react";
 import type { QuickLinkIcon } from "@/types/retreat";
 
-// Central icon map so home quick-action buttons stay in sync with section icons.
 export const iconMap: Record<QuickLinkIcon, LucideIcon> = {
   itinerary: CalendarDays,
   hotel: Building2,
@@ -22,4 +22,5 @@ export const iconMap: Record<QuickLinkIcon, LucideIcon> = {
   around: MapPinned,
   info: Info,
   contacts: PhoneCall,
+  apps: Smartphone,
 };
