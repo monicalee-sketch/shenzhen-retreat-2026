@@ -9,7 +9,7 @@ interface SectionCardProps {
 
 export default function SectionCard({ title, subtitle, children, className = "" }: SectionCardProps) {
   return (
-    <div className={`rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100 ${className}`}>
+    <div className={`print-avoid-break rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100 ${className}`}>
       {title && (
         <h3 className="text-sm font-semibold text-slate-800">{title}</h3>
       )}

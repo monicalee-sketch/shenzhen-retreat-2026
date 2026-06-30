@@ -25,7 +25,7 @@ export default function SectionImage({ src, alt, className = "" }: SectionImageP
         src={src}
         alt={alt}
         fill
-        loading="lazy"
+        loading="eager"
         decoding="async"
         quality={80}
         sizes="(max-width: 430px) 100vw, 430px"

@@ -29,7 +29,7 @@ export default function PlaceItem({ place }: PlaceItemProps) {
             href={mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex shrink-0 items-center gap-1 rounded-full bg-brand-gold-100 px-2.5 py-1.5 text-xs font-semibold text-brand-gold-dark"
+            className="no-print flex shrink-0 items-center gap-1 rounded-full bg-brand-gold-100 px-2.5 py-1.5 text-xs font-semibold text-brand-gold-dark"
           >
             <MapPin size={11} /> {mapLabel}
           </a>

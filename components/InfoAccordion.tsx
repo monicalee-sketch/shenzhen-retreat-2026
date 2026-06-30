@@ -28,7 +28,7 @@ export default function InfoAccordion({ title, content, defaultOpen = false }: I
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-200 ease-in-out ${
+        className={`accordion-panel overflow-hidden transition-all duration-200 ease-in-out ${
           open ? "max-h-[600px]" : "max-h-0"
         }`}
       >

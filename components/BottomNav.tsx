@@ -51,7 +51,7 @@ export default function BottomNav() {
   }, []);
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-100 bg-white/95 backdrop-blur-sm pb-[env(safe-area-inset-bottom)]">
+    <nav className="no-print fixed inset-x-0 bottom-0 z-50 border-t border-slate-100 bg-white/95 backdrop-blur-sm pb-[env(safe-area-inset-bottom)]">
       <div className="mx-auto flex max-w-xl items-stretch justify-between px-1">
         {NAV_ITEMS.map((item) => {
           const Icon = item.icon;

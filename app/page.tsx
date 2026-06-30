@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone, Info } from "lucide-react";
+import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, Smartphone, Info } from "lucide-react";
 import { retreatData } from "@/data/retreat";
 import Section from "@/components/Section";
 import SectionCard from "@/components/SectionCard";
@@ -15,6 +15,7 @@ import PlaceItem from "@/components/PlaceItem";
 import AppCard from "@/components/AppCard";
 import ShareButton from "@/components/ShareButton";
 import PrintButton from "@/components/PrintButton";
+import DownloadPdfButton from "@/components/DownloadPdfButton";
 import BottomNav from "@/components/BottomNav";
 
 export default function Home() {
@@ -36,7 +37,6 @@ export default function Home() {
 
   const arrivalQr = qrItems.find((q) => q.id === "arrival-card");
   const hotelQr   = qrItems.find((q) => q.id === "hotel-location");
-  const pdfQr     = qrItems.find((q) => q.id === "pdf-backup");
 
   return (
     <>
@@ -68,7 +68,7 @@ export default function Home() {
             </ul>
           </SectionCard>
 
-          <div className="grid grid-cols-3 gap-3">
+          <div className="no-print grid grid-cols-3 gap-3">
             {quickLinks.map((link) => (
               <QuickActionButton key={link.label} link={link} />
             ))}
@@ -199,7 +199,7 @@ export default function Home() {
 
         {/* ITINERARY */}
         <Section id="itinerary" title="Itinerary" description="Day-by-day plan for the retreat.">
-          <div className="flex items-center justify-between">
+          <div className="no-print flex items-center justify-between">
             <span className="text-xs text-slate-400">Tap a day to follow along</span>
             <PrintButton />
           </div>
@@ -322,14 +322,14 @@ export default function Home() {
             </div>
           </SectionCard>
 
-          {pdfQr && (
-            <SectionCard title="Offline backup">
-              <QRBlock item={pdfQr} />
-              <div className="mt-3">
-                <LinkButton href={pdfQr.data} label="Download PDF backup" icon={FileText} variant="ghost" />
-              </div>
-            </SectionCard>
-          )}
+          <SectionCard title="Offline backup">
+            <p className="text-sm leading-relaxed text-slate-600">
+              Save the whole guide as a PDF to your phone — handy if you lose signal or just want everything in one file.
+            </p>
+            <div className="mt-3">
+              <DownloadPdfButton />
+            </div>
+          </SectionCard>
 
           <SectionCard title="One more thing">
             <div className="flex items-center gap-2 text-sm text-slate-500">

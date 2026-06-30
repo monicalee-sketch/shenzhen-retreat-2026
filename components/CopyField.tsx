@@ -31,10 +31,10 @@ export default function CopyField({ label, value, copyValue }: CopyFieldProps) {
     >
       <span className="min-w-0">
         <span className="block text-xs font-medium text-slate-500">{label}</span>
-        <span className="block truncate text-sm font-medium text-slate-800">{value}</span>
+        <span className="block truncate text-sm font-medium text-slate-800 print:whitespace-normal">{value}</span>
       </span>
       <span
-        className={`flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors ${
+        className={`no-print flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors ${
           copied ? "bg-emerald-100 text-emerald-700" : "bg-white text-brand-gold-dark shadow-sm"
         }`}
       >

@@ -11,7 +11,7 @@ const BADGE_STYLE: Record<string, string> = {
 
 export default function AppCard({ app }: AppCardProps) {
   return (
-    <div className="flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+    <div className="print-avoid-break flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-sm font-semibold text-slate-900">
@@ -36,7 +36,7 @@ export default function AppCard({ app }: AppCardProps) {
       </p>
 
       {(app.iosUrl || app.androidUrl) && (
-        <div className="flex gap-2">
+        <div className="no-print flex gap-2">
           {app.iosUrl && (
             <a
               href={app.iosUrl}

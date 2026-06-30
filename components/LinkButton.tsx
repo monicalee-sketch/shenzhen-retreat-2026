@@ -21,7 +21,7 @@ export default function LinkButton({ href, label, icon: Icon, variant = "seconda
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      className={`flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition-colors ${variantStyles[variant]}`}
+      className={`no-print flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold transition-colors ${variantStyles[variant]}`}
     >
       {Icon && <Icon size={18} />}
       <span>{label}</span>

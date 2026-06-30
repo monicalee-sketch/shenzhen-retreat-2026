@@ -23,7 +23,7 @@ const tagLabels: Record<ItineraryTag, string> = {
 
 export default function ItineraryCard({ day }: ItineraryCardProps) {
   return (
-    <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
+    <div className="print-avoid-break rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
       <div className="flex items-baseline justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold-dark">Day {day.day} · {day.date}</p>

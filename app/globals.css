@@ -28,20 +28,57 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Print-friendly itinerary: hide everything else when printing. */
+/* Print mode 1 (default): "Print itinerary" button — itinerary section only. */
 @media print {
-  body * {
+  body:not(.print-full) * {
     visibility: hidden;
   }
 
-  #itinerary,
-  #itinerary * {
+  body:not(.print-full) #itinerary,
+  body:not(.print-full) #itinerary * {
     visibility: visible;
   }
 
-  #itinerary {
+  body:not(.print-full) #itinerary {
     position: absolute;
     inset: 0;
     padding-top: 1rem;
+  }
+}
+
+/* Print mode 2: "Save / Print Full Guide as PDF" — the whole guide, cleaned up for paper. */
+@media print {
+  body.print-full .no-print {
+    display: none !important;
+  }
+
+  body.print-full {
+    background: white;
+  }
+
+  /* Force accordions fully open regardless of on-screen collapsed state. */
+  body.print-full .accordion-panel {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Dark hero/banner cards: switch to ink-economical white background + dark text. */
+  body.print-full .from-brand-charcoal {
+    background: white !important;
+    background-image: none !important;
+    border: 1px solid #d4d4d4;
+  }
+  body.print-full .from-brand-charcoal,
+  body.print-full .from-brand-charcoal * {
+    color: #191919 !important;
+  }
+
+  /* Keep major content blocks from splitting awkwardly across pages. */
+  .print-avoid-break {
+    break-inside: avoid;
+  }
+
+  section[id] {
+    break-inside: avoid-page;
   }
 }

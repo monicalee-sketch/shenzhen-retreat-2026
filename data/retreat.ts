@@ -642,12 +642,6 @@ export const retreatData: RetreatData = {
       description: "Scan or tap to open the hotel in Amap (高德地图) for directions.",
       data: "https://uri.amap.com/search?keyword=深圳希尔顿福田&city=深圳&callnative=0",
     },
-    {
-      id: "pdf-backup",
-      label: "PDF Backup of This Guide",
-      description: "[PLACEHOLDER] Scan or tap to download a printable PDF version of this guide.",
-      data: "https://www.example.com/retreat-guide-pdf-placeholder",
-    },
   ],
 
   appsToDownload: {

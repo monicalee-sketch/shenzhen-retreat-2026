@@ -29,7 +29,7 @@ export default function QRBlock({ item }: QRBlockProps) {
   };
 
   return (
-    <div className="flex flex-col gap-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
+    <div className="print-avoid-break flex flex-col gap-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
       <div>
         <p className="text-sm font-semibold text-slate-900">{item.label}</p>
         {item.description && (
@@ -56,7 +56,7 @@ export default function QRBlock({ item }: QRBlockProps) {
             decoding="async"
             className="shrink-0 rounded-xl ring-1 ring-slate-100"
           />
-          <div className="flex min-w-0 flex-1 flex-col gap-2">
+          <div className="no-print flex min-w-0 flex-1 flex-col gap-2">
             <a
               href={linkUrl}
               target="_blank"

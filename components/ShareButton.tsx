@@ -24,7 +24,7 @@ export default function ShareButton({ title }: ShareButtonProps) {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="no-print flex justify-center">
       <button
         type="button"
         onClick={handleShare}
