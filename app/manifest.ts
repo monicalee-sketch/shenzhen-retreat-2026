@@ -7,11 +7,11 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Pocket guide for the Shenzhen Staff Retreat 2026.",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#0d9488",
+    background_color: "#191919",
+    theme_color: "#191919",
     icons: [
-      { src: "/icon", sizes: "64x64", type: "image/png" },
-      { src: "/apple-icon", sizes: "180x180", type: "image/png" },
+      { src: "/icon.png", sizes: "256x256", type: "image/png" },
+      { src: "/apple-icon.png", sizes: "180x180", type: "image/png" },
     ],
   };
 }

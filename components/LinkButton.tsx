@@ -10,7 +10,7 @@ interface LinkButtonProps {
 }
 
 const variantStyles: Record<NonNullable<LinkButtonProps["variant"]>, string> = {
-  primary: "bg-teal-600 text-white shadow-sm active:bg-teal-700",
+  primary: "bg-brand-gold text-brand-charcoal shadow-sm active:bg-brand-gold-dark",
   secondary: "bg-white text-slate-800 border border-slate-200 shadow-sm active:bg-slate-50",
   ghost: "bg-slate-50 text-slate-700 active:bg-slate-100",
 };

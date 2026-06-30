@@ -61,7 +61,7 @@ export default function QRBlock({ item }: QRBlockProps) {
               href={linkUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded-xl bg-teal-600 px-3 py-2.5 text-sm font-semibold text-white shadow-sm active:bg-teal-700"
+              className="flex items-center justify-center gap-2 rounded-xl bg-brand-gold px-3 py-2.5 text-sm font-semibold text-brand-charcoal shadow-sm active:bg-brand-gold-dark"
             >
               <ExternalLink size={15} /> Open link
             </a>

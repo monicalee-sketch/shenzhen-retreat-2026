@@ -6,7 +6,7 @@ interface ItineraryCardProps {
 }
 
 const tagStyles: Record<ItineraryTag, string> = {
-  highlight: "bg-teal-100 text-teal-700",
+  highlight: "bg-brand-gold-100 text-brand-gold-dark",
   meal: "bg-amber-100 text-amber-700",
   free: "bg-slate-100 text-slate-600",
   travel: "bg-sky-100 text-sky-700",
@@ -26,7 +26,7 @@ export default function ItineraryCard({ day }: ItineraryCardProps) {
     <div className="rounded-3xl bg-white p-5 shadow-sm ring-1 ring-slate-100">
       <div className="flex items-baseline justify-between gap-3">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wide text-teal-600">Day {day.day} · {day.date}</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold-dark">Day {day.day} · {day.date}</p>
           <h3 className="mt-0.5 text-lg font-bold text-slate-900">{day.label}</h3>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function ItineraryCard({ day }: ItineraryCardProps) {
       <ol className="mt-4 flex flex-col gap-4 border-l-2 border-slate-100 pl-4">
         {day.events.map((event, i) => (
           <li key={i} className="relative">
-            <span className="absolute -left-[21px] top-1 h-2.5 w-2.5 rounded-full bg-teal-500 ring-4 ring-white" />
+            <span className="absolute -left-[21px] top-1 h-2.5 w-2.5 rounded-full bg-brand-gold ring-4 ring-white" />
             <p className="text-xs font-semibold text-slate-400">{event.time}</p>
             <div className="mt-0.5 flex flex-wrap items-center gap-2">
               <p className="text-sm font-semibold text-slate-900">{event.title}</p>

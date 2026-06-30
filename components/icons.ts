@@ -8,6 +8,7 @@ import {
   ShoppingBag,
   PhoneCall,
   Smartphone,
+  Moon,
   type LucideIcon,
 } from "lucide-react";
 import type { QuickLinkIcon } from "@/types/retreat";
@@ -23,4 +24,5 @@ export const iconMap: Record<QuickLinkIcon, LucideIcon> = {
   info: Info,
   contacts: PhoneCall,
   apps: Smartphone,
+  halal: Moon,
 };

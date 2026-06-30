@@ -18,10 +18,10 @@ export default function HalalGuidePage() {
         <ArrowLeft size={15} /> Back to retreat guide
       </Link>
 
-      <div className="rounded-3xl bg-gradient-to-br from-teal-500 to-teal-600 p-6 text-white shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-wide text-teal-100">Shenzhen Staff Retreat · 15–18 July 2026</p>
+      <div className="rounded-3xl bg-gradient-to-br from-brand-charcoal to-brand-charcoal-soft p-6 text-white shadow-sm">
+        <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold-light">Shenzhen Staff Retreat · 15–18 July 2026</p>
         <h1 className="mt-1 text-2xl font-bold leading-tight">Muslim-Friendly Travel Guide</h1>
-        <p className="mt-4 text-sm leading-relaxed text-teal-50">{overview}</p>
+        <p className="mt-4 text-sm leading-relaxed text-white/85">{overview}</p>
       </div>
 
       <SectionCard title="Prayer facilities">
@@ -29,7 +29,7 @@ export default function HalalGuidePage() {
         <ul className="mt-3 flex flex-col gap-2">
           {mosque.tips.map((tip, i) => (
             <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-              <Sparkles size={14} className="mt-0.5 shrink-0 text-teal-500" />
+              <Sparkles size={14} className="mt-0.5 shrink-0 text-brand-gold-dark" />
               <span>{tip}</span>
             </li>
           ))}
@@ -91,7 +91,7 @@ export default function HalalGuidePage() {
         <ol className="mt-2 flex flex-col gap-2 border-l-2 border-slate-100 pl-4">
           {guangzhouTrip.itinerary.map((step, i) => (
             <li key={i} className="relative text-sm leading-relaxed text-slate-600">
-              <span className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full bg-teal-500" />
+              <span className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full bg-brand-gold" />
               {step}
             </li>
           ))}

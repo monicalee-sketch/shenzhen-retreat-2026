@@ -35,7 +35,7 @@ export default function CopyField({ label, value, copyValue }: CopyFieldProps) {
       </span>
       <span
         className={`flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors ${
-          copied ? "bg-emerald-100 text-emerald-700" : "bg-white text-teal-600 shadow-sm"
+          copied ? "bg-emerald-100 text-emerald-700" : "bg-white text-brand-gold-dark shadow-sm"
         }`}
       >
         {copied ? (

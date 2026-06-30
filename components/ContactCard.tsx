@@ -42,7 +42,7 @@ export default function ContactCard({ contact }: ContactCardProps) {
         <div className="mt-3 flex flex-col gap-2 sm:flex-row">
           <a
             href={`tel:${phone.replace(/[^+\d]/g, "")}`}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm active:bg-teal-700"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-brand-gold px-4 py-2.5 text-sm font-semibold text-brand-charcoal shadow-sm active:bg-brand-gold-dark"
           >
             <Phone size={15} /> Call {phone}
           </a>

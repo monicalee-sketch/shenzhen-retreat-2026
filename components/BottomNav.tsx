@@ -64,15 +64,15 @@ export default function BottomNav() {
             >
               <span
                 className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors ${
-                  isActive ? "bg-teal-50 text-teal-600" : "text-slate-400"
+                  isActive ? "bg-brand-gold-100 text-brand-gold-dark" : "text-slate-400"
                 }`}
               >
                 <Icon size={18} />
               </span>
               {/* Keep height consistent: invisible when not active */}
               <span
-                className={`mt-0.5 text-[10px] font-semibold transition-colors ${
-                  isActive ? "text-teal-600" : "invisible"
+                className={`mt-0.5 text-[11px] font-semibold transition-colors ${
+                  isActive ? "text-brand-gold-dark" : "invisible"
                 }`}
               >
                 {item.label}

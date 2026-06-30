@@ -5,7 +5,7 @@ interface AppCardProps {
 }
 
 const BADGE_STYLE: Record<string, string> = {
-  Essential:    "bg-teal-50 text-teal-700",
+  Essential:    "bg-brand-gold-100 text-brand-gold-dark",
   "Good to have": "bg-slate-100 text-slate-500",
 };
 

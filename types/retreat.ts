@@ -26,7 +26,8 @@ export type QuickLinkIcon =
   | "around"
   | "info"
   | "contacts"
-  | "apps";
+  | "apps"
+  | "halal";
 
 export interface QuickLink {
   label: string;
@@ -114,6 +115,8 @@ export interface Place {
   fallbackUrl?: string;
   /** Optional photo. Path relative to /public, e.g. "/images/places/coco-park.webp" */
   image?: string;
+  /** Optional callout shown below the description, e.g. a service disruption notice. */
+  note?: string;
 }
 
 export interface AroundHotel {
@@ -121,6 +124,7 @@ export interface AroundHotel {
   food: Place[];
   cafes: Place[];
   nightlife: Place[];
+  spas: Place[];
   essentials: Place[];
   sightseeing: Place[];
 }

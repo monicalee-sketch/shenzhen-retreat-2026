@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone, Info, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone, Info } from "lucide-react";
 import { retreatData } from "@/data/retreat";
 import Section from "@/components/Section";
 import SectionCard from "@/components/SectionCard";
@@ -43,20 +43,25 @@ export default function Home() {
       <main className="flex-1 pb-28">
         {/* HOME */}
         <Section id="home">
-          <div className="rounded-3xl bg-gradient-to-br from-teal-500 to-teal-600 p-6 text-white shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-wide text-teal-100">
+          <div className="flex items-center justify-between px-0.5">
+            <Image src="/pfp-logo.webp" alt="PFP" width={28} height={28} priority className="h-7 w-7 object-contain" />
+            <span className="text-[10px] font-semibold uppercase tracking-wide text-slate-400">Staff Retreat 2026</span>
+          </div>
+
+          <div className="rounded-3xl bg-gradient-to-br from-brand-charcoal to-brand-charcoal-soft p-6 text-white shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wide text-brand-gold-light">
               {overview.dateRange} · {overview.city}
             </p>
             <h1 className="mt-1 text-2xl font-bold leading-tight">{overview.title}</h1>
-            <p className="mt-1 text-sm text-teal-50">{overview.subtitle}</p>
-            <p className="mt-4 text-sm leading-relaxed text-teal-50">{overview.welcomeNote}</p>
+            <p className="mt-1 text-sm text-white/90">{overview.subtitle}</p>
+            <p className="mt-4 text-sm leading-relaxed text-white/85">{overview.welcomeNote}</p>
           </div>
 
           <SectionCard title="Quick reminders">
             <ul className="flex flex-col gap-2">
               {overview.quickReminders.map((reminder, i) => (
                 <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
-                  <Sparkles size={15} className="mt-0.5 shrink-0 text-teal-500" />
+                  <Sparkles size={15} className="mt-0.5 shrink-0 text-brand-gold-dark" />
                   <span>{reminder}</span>
                 </li>
               ))}
@@ -86,7 +91,7 @@ export default function Home() {
         <Section id="apps" title="Apps to Download" description="Install these before you leave — some aren't available in China.">
           <SectionCard title="Must-have">
             <div className="flex items-center gap-2 mb-3">
-              <Smartphone size={15} className="shrink-0 text-teal-500" />
+              <Smartphone size={15} className="shrink-0 text-brand-gold-dark" />
               <p className="text-xs text-slate-500">Install and set up before you fly — may be hard to access once in China.</p>
             </div>
             <div className="flex flex-col gap-3">
@@ -127,7 +132,7 @@ export default function Home() {
           )}
           <p className="flex items-start gap-2 rounded-2xl bg-sky-50 px-3 py-2.5 text-xs leading-relaxed text-sky-700">
             <Info size={14} className="mt-0.5 shrink-0" />
-            Google Maps doesn&apos;t load in mainland China — use Amap for reliable directions, or download Amap&apos;s offline Shenzhen map pack before you fly.
+            Google Maps doesn&apos;t reliably load on local Chinese networks — install the Amap app before you fly for the smoothest experience. Opening Amap links in a browser without the app can prompt a login/QR-scan wall.
           </p>
 
           {hotelQr && <QRBlock item={hotelQr} />}
@@ -149,7 +154,7 @@ export default function Home() {
               <div>
                 <dt className="text-xs text-slate-400">Website</dt>
                 <dd className="font-medium text-slate-700">
-                  <a href={hotel.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-teal-600">
+                  <a href={hotel.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-brand-gold-dark">
                     <Globe size={14} /> Visit
                   </a>
                 </dd>
@@ -184,7 +189,7 @@ export default function Home() {
               {hotel.nearbyEssentials.map((item) => (
                 <li key={item.name} className="flex items-center justify-between text-sm">
                   <span className="text-slate-700">{item.name}</span>
-                  <span className="text-xs font-medium text-teal-600">{item.distance}</span>
+                  <span className="text-xs font-medium text-brand-gold-dark">{item.distance}</span>
                 </li>
               ))}
             </ul>
@@ -204,7 +209,7 @@ export default function Home() {
         </Section>
 
         {/* AROUND THE HOTEL */}
-        <Section id="around-hotel" title="Around the Hotel" description="Our picks for the Futian / COCO Park area.">
+        <Section id="around-hotel" title="Around the Hotel" description="Our picks for the Futian / COCO Park area. Walking times are estimates — check Amap for live ETAs, and consider Didi in summer heat.">
           <SectionCard title="Shopping malls">
             <div className="flex flex-col">
               {aroundHotel.malls.map((place) => (
@@ -229,6 +234,13 @@ export default function Home() {
           <SectionCard title="Drinks & nightlife">
             <div className="flex flex-col">
               {aroundHotel.nightlife.map((place) => (
+                <PlaceItem key={place.name} place={place} />
+              ))}
+            </div>
+          </SectionCard>
+          <SectionCard title="24-hour spas">
+            <div className="flex flex-col">
+              {aroundHotel.spas.map((place) => (
                 <PlaceItem key={place.name} place={place} />
               ))}
             </div>
@@ -310,16 +322,6 @@ export default function Home() {
             </div>
           </SectionCard>
 
-          <SectionCard title="More resources">
-            <Link
-              href="/halal-guide"
-              className="flex items-center justify-between gap-3 rounded-2xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700"
-            >
-              Muslim-Friendly Travel Guide
-              <ArrowRight size={16} className="shrink-0 text-teal-600" />
-            </Link>
-          </SectionCard>
-
           {pdfQr && (
             <SectionCard title="Offline backup">
               <QRBlock item={pdfQr} />
@@ -331,7 +333,7 @@ export default function Home() {
 
           <SectionCard title="One more thing">
             <div className="flex items-center gap-2 text-sm text-slate-500">
-              <Smartphone size={16} className="shrink-0 text-teal-500" />
+              <Smartphone size={16} className="shrink-0 text-brand-gold-dark" />
               <span>Save this page to your home screen for one-tap access all retreat long.</span>
             </div>
             <p className="mt-2 text-xs text-slate-400">

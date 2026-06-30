@@ -10,6 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* PFP brand palette — sourced from pfp-fa.com */
+  --color-brand-gold-50: #faf3e7;
+  --color-brand-gold-100: #f0e1c2;
+  --color-brand-gold-light: #d4ae6a;
+  --color-brand-gold: #a87719;
+  --color-brand-gold-dark: #8a5f14;
+  --color-brand-charcoal: #191919;
+  --color-brand-charcoal-soft: #2a2a2a;
+  --color-brand-ink: #353535;
 }
 
 body {
