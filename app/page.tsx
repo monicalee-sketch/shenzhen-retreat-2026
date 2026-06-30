@@ -1,4 +1,4 @@
-import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone } from "lucide-react";
+import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone, Info } from "lucide-react";
 import { retreatData } from "@/data/retreat";
 import Section from "@/components/Section";
 import SectionCard from "@/components/SectionCard";
@@ -124,6 +124,10 @@ export default function Home() {
           {hotel.fallbackUrl && (
             <LinkButton href={hotel.fallbackUrl} label="Open in Google Maps" icon={MapPin} variant="ghost" />
           )}
+          <p className="flex items-start gap-2 rounded-2xl bg-sky-50 px-3 py-2.5 text-xs leading-relaxed text-sky-700">
+            <Info size={14} className="mt-0.5 shrink-0" />
+            Google Maps doesn&apos;t load in mainland China — use Amap for reliable directions, or download Amap&apos;s offline Shenzhen map pack before you fly.
+          </p>
 
           {hotelQr && <QRBlock item={hotelQr} />}
 
