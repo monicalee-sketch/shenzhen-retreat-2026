@@ -1,4 +1,5 @@
-import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone, Info } from "lucide-react";
+import Link from "next/link";
+import { MapPin, Phone, Globe, Wifi, Clock, Sparkles, FileText, Smartphone, Info, ArrowRight } from "lucide-react";
 import { retreatData } from "@/data/retreat";
 import Section from "@/components/Section";
 import SectionCard from "@/components/SectionCard";
@@ -307,6 +308,16 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <ContactCard contact={{ name: hotel.name, role: "Front desk", phone: hotel.phone }} />
             </div>
+          </SectionCard>
+
+          <SectionCard title="More resources">
+            <Link
+              href="/halal-guide"
+              className="flex items-center justify-between gap-3 rounded-2xl bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700"
+            >
+              Muslim-Friendly Travel Guide
+              <ArrowRight size={16} className="shrink-0 text-teal-600" />
+            </Link>
           </SectionCard>
 
           {pdfQr && (
