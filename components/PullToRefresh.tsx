@@ -67,7 +67,10 @@ export default function PullToRefresh({ children }: PullToRefreshProps) {
       </div>
       <div
         style={{
-          transform: `translateY(${pullDistance}px)`,
+          // Only set `transform` while actively pulling. A `transform` on this
+          // ancestor — even translateY(0px) — creates a new containing block,
+          // which breaks `position: fixed` on descendants like BottomNav.
+          transform: pullDistance > 0 ? `translateY(${pullDistance}px)` : undefined,
           transition: dragging ? undefined : "transform 200ms ease-out",
         }}
       >
